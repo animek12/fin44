@@ -1,7 +1,7 @@
 import moment from 'moment-timezone'
 let handler = async (m, { conn, text, participants, isAdmin, isOwner }) => {
     let users = participants.map(u => u.id).filter(v => v !== conn.user.jid)
-    let bcbg = 'https://telegra.ph/file/6e2eb5dc12b4b5bc05e16.jpg'
+    let bcbg = 'https://telegra.ph/file/22c37ae9c7ad652862c6e.jpg'
     conn.send3ButtonLoc(m.chat, bcbg, wm, `${text ? `${text}\n` : ''}┌─「 Tag All 」\n` + users.map(v => '│◦❒ @' + v.replace(/@.+/, '')).join`\n` + '\n└────','Menu', '.menu', 'Owner', '.owner', `\nKakek Gw Sugiono`, '.huuu', null,
  /*let m.reply(`${text ? `${text}\n` : ''}┌─「 Tag All 」\n` + users.map(v => '│◦❒ @' + v.replace(/@.+/, '')).join`\n` + '\n└────', null, */{
         mentions: users
